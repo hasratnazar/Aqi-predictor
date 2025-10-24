@@ -1,0 +1,5 @@
+hopsworks[python]
+pandas
+requests
+hopsworks
+twofish
