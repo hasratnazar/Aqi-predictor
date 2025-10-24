@@ -68,7 +68,7 @@ def load_to_hopsworks(df, project_name):
     fg.insert(df, write_options={"wait_for_job": True})
     print("Successfully inserted data into Hopsworks Feature Group.")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     # from dotenv import load_dotenv
     # load_dotenv()
 
