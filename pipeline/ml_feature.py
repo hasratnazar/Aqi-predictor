@@ -112,7 +112,7 @@ def run_feature_pipeline():
     print(ml_df.head())
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     
     
     if not os.environ.get("HOPSWORKS_PROJECT_NAME") or not os.environ.get("HOPSWORKS_API_KEY"):
