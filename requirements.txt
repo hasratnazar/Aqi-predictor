@@ -3,3 +3,6 @@ pandas
 requests
 hopsworks
 twofish
+scikit-learn
+joblib
+numpy
