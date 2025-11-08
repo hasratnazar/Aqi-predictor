@@ -45,12 +45,12 @@ def fetch_openweather_data(lat, lon, api_key):
     # 5. Convert to DataFrame
     df = pd.DataFrame(combined_data)
 
-    # 6. Convert numeric columns to float to match Hopsworks schema
-    numeric_cols = [
-        'aqi', 'co', 'no2', 'o3', 'so2', 'pm2_5', 'pm10',
-        'temp', 'feels_like', 'pressure', 'humidity', 'wind_speed', 'clouds'
-    ]
-    df[numeric_cols] = df[numeric_cols].astype(float)
+    # 6. Correct dtypes to match Hopsworks Feature Group schema
+    int_cols = ['aqi', 'pressure', 'humidity', 'clouds']
+    float_cols = ['co', 'no2', 'o3', 'so2', 'pm2_5', 'pm10', 'temp', 'feels_like', 'wind_speed']
+
+    df[int_cols] = df[int_cols].astype(int)
+    df[float_cols] = df[float_cols].astype(float)
 
     print("Successfully fetched and combined data.")
     print(df.head())
