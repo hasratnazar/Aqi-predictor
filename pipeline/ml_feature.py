@@ -4,8 +4,8 @@ import hopsworks
 import os
 
 
-# --- 1. AQI Calculation Functions ---
-# (These are the same helpers from the notebook)
+# AQI Calculation Functions
+
 
 MW = {'co': 28.01, 'o3': 48.00, 'no2': 46.01, 'so2': 64.07}
 BREAKPOINTS = {
@@ -43,7 +43,7 @@ def calculate_overall_aqi(row):
     valid_indices = [i for i in sub_indices if pd.notna(i)]
     return max(valid_indices) if valid_indices else np.nan
 
-# --- 2. Main ETL (Extract, Transform, Load) Function ---
+# Main ETL (Extract, Transform, Load) Function
 
 def run_feature_pipeline():
     """
@@ -51,7 +51,7 @@ def run_feature_pipeline():
     and saves it to a new ML-ready feature group.
     """
     
-    # --- 1. EXTRACT ---
+    # EXTRACT 
     print("Connecting to Hopsworks...")
     project = hopsworks.login(project=os.environ.get("HOPSWORKS_PROJECT_NAME"))
     fs = project.get_feature_store()
@@ -61,7 +61,7 @@ def run_feature_pipeline():
     df = fg_raw.read()
     df = df.sort_values(by="timestamp_int")
 
-    # --- 2. TRANSFORM ---
+    # TRANSFORM
     print("Transforming data (calculating AQI and features)...")
     
     # Calculate the AQI number (this will be your target 'y')
