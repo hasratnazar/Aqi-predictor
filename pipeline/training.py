@@ -10,11 +10,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import r2_score, mean_absolute_error
 from sklearn.linear_model import Ridge
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-
-# --- NEW IMPORTS ---
 from sklearn.svm import SVR
 from sklearn.neighbors import KNeighborsRegressor
-# --- END NEW IMPORTS ---
+
 
 def train_and_save_model():
     """
@@ -63,17 +61,16 @@ def train_and_save_model():
     # --- 4. Train and Save All Models ---
     print("Training and saving models...")
     
-    # --- UPDATED DICTIONARY ---
+    
     models = {
         'Ridge': Ridge(),
         'RandomForest': RandomForestRegressor(n_estimators=100, random_state=42),
         'GradientBoosting': GradientBoostingRegressor(n_estimators=100, random_state=42),
         'SVR': SVR(),
-        'KNN': KNeighborsRegressor(n_neighbors=5) # n_neighbors=5 is a good default
+        'KNN': KNeighborsRegressor(n_neighbors=5)
     }
-    # --- END UPDATED DICTIONARY ---
+  
 
-    # Get the model registry before the loop
     mr = project.get_model_registry()
 
     for name, model in models.items():

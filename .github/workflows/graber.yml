@@ -29,7 +29,7 @@ jobs:
       - name: Run data collection script
         run: python pipeline/fetch_raw_data.py
         env:
-          # Pass the secrets to the script as environment variables
+          
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
           HOPSWORKS_PROJECT_NAME: ${{ secrets.HOPSWORKS_PROJECT_NAME }}
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}

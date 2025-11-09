@@ -1,3 +1,7 @@
+[![Data Collector](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/graber.yml/badge.svg)](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/graber.yml)
+[![Feature Extraction](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/Preprocessing.yml/badge.svg)](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/Preprocessing.yml)
+[![Model Training](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/training.yml/badge.svg)](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/training.yml)
+
 # 🌍 AQI Predictor
 
 An end-to-end **Air Quality Index (AQI) Prediction System** that fetches live weather and pollution data, processes it through a machine learning pipeline, and predicts air quality levels using models such as **Gradient Boosting** and **Random Forest**.
@@ -37,12 +41,11 @@ The **AQI Predictor** performs the following tasks:
 | **Programming Language** | Python 3.x |
 | **Data Handling** | Pandas, NumPy |
 | **Visualization** | Matplotlib, Seaborn |
-| **Machine Learning** | Scikit-learn (RandomForest, GradientBoosting) |
+| **Machine Learning** | Scikit-learn  |
 | **Feature Store** | Hopsworks |
 | **Web Framework** | Streamlit |
 | **Automation** | GitHub Actions |
-| **Environment Management** | Virtualenv |
-| **Data Source APIs** | OpenWeatherMap / Air Pollution API |
+| **Data Source APIs** | OpenWeatherMap  |
 
 **Languages & Libraries**
 - 🐍 Python (Pandas, NumPy, Scikit-learn, Matplotlib)
@@ -76,23 +79,23 @@ The project follows a modular, end-to-end machine learning pipeline located insi
 
 ## 🧑‍💻 How to Run the Project Locally
 
-### 1 Clone the Repository
+###  Clone the Repository
 ```bash
 git clone https://github.com/<your-username>/aqi-predictor.git
 cd "AQI PREDICTOR"
 
-### 2 create and activate virtual environment
+###  create and activate virtual environment
 
 python -m venv venv
 venv\Scripts\activate
 
-### 3 Install Dependencies
+###  Install Dependencies
 
 pip install -r requirements.txt
 
-### 4 Run the Pipeline
+###  Run the Pipeline
 
-### 5 Launch the Streamlit App
+###  Launch the Streamlit App
 
 streamlit run app.py
 
