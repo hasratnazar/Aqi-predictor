@@ -1,3 +1,7 @@
+[![Data Collector](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/graber.yml/badge.svg)](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/graber.yml)
+[![Feature Extraction](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/Preprocessing.yml/badge.svg)](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/Preprocessing.yml)
+[![Model Training](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/training.yml/badge.svg)](https://github.com/hasratnazar/Aqi-predictor/actions/workflows/training.yml)
+
 # 🌍 AQI Predictor
 
 An end-to-end **Air Quality Index (AQI) Prediction System** that fetches live weather and pollution data, processes it through a machine learning pipeline, and predicts air quality levels using models such as **Gradient Boosting** and **Random Forest**.
